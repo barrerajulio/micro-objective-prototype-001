@@ -1,13 +1,7 @@
 import getDecorators from 'inversify-inject-decorators';
 import {Container, interfaces} from 'inversify';
 
-import {IProvider, NameProvider} from './providers.remove';
-import {Symbols} from './symbols';
-
-const container = new Container();
-container.bind<IProvider>(Symbols.IProvider).to(NameProvider);
-
-const Decorators = getDecorators(container, false);
+const Decorators = getDecorators(new Container(), false);
 
 interface IBabelPropertyDescriptor extends PropertyDescriptor {
   initializer(): any;
