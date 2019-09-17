@@ -1,10 +1,12 @@
 import faker from 'faker';
+import {injectable} from 'inversify';
 
 import {
   IActivityAttributeRepository,
   IActivityAttributeResponse,
-} from '../../Interfaces/Repositories';
+} from '../../interfaces/repositories';
 
+@injectable()
 export class ActivityAttributeDummyRepository
   implements IActivityAttributeRepository {
   public async findByActivityId(

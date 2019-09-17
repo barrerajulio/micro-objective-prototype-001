@@ -1,18 +1,20 @@
 import faker from 'faker';
+import {injectable} from 'inversify';
 
 import {
   IActivityRepository,
   IActivityResponse,
-} from '../../Interfaces/Repositories/Activity.repository';
+} from '../../interfaces/repositories/Activity.repository';
 import {injectProperty} from './../../../ioc';
 import {
   IRoutineRepository,
   IRoutineResponse,
-} from './../../Interfaces/Repositories/Routine.repository';
+} from './../../interfaces/repositories/Routine.repository';
 import {Symbols} from './../../../symbols';
 
+@injectable()
 export class RoutineDummyRepository implements IRoutineRepository {
-  @injectProperty(Symbols.IActivityRepository)
+  // @injectProperty(Symbols.IActivityRepository)
   private activityRepository!: IActivityRepository;
 
   public async findOneById(id: number): Promise<IRoutineResponse> {

@@ -1,10 +1,12 @@
 import faker from 'faker';
+import {injectable} from 'inversify';
 
 import {
   IAttributeRepository,
   IAttributeResponse,
-} from '../../Interfaces/Repositories';
+} from '../../interfaces/repositories';
 
+@injectable()
 export class AttributeDummyRepository implements IAttributeRepository {
   public async findByOneById(id: number): Promise<IAttributeResponse> {
     return {
