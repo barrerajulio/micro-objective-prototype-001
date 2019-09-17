@@ -12,6 +12,9 @@
     "inversify-inject-decorators": "^3.1.0",
     "react": "16.8.6",
     "react-native": "0.60.5",
+    "react-native-gesture-handler": "^1.4.1",
+    "react-navigation": "^4.0.5",
+    "react-navigation-stack": "^1.8.0",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {

@@ -1,18 +1,17 @@
 import 'reflect-metadata';
-import React from 'react';
-import {SafeAreaView} from 'react-native';
+import React, {PureComponent, ReactNode} from 'react';
 
-import {ActivityGroup} from './src/components/Activity/Group/ActivityGroup.component';
+import {createAppContainer} from 'react-navigation';
 import {IocContext} from './src/contexts/Ioc.context';
+import {MainNavigator} from './src/navigators/Main.navigator';
 
-const App = () => {
-  return (
-    <IocContext.Provider value={{}}>
-      <SafeAreaView>
-        <ActivityGroup />
-      </SafeAreaView>
-    </IocContext.Provider>
-  );
-};
-
-export default App;
+export class App extends PureComponent {
+  public render(): ReactNode {
+    const MainNavigatorAppContainer = createAppContainer(MainNavigator);
+    return (
+      <IocContext.Provider value={{}}>
+        <MainNavigatorAppContainer />
+      </IocContext.Provider>
+    );
+  }
+}
