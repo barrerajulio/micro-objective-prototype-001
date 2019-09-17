@@ -8,7 +8,7 @@ export class HomeScreen extends PureComponent<NavigationScreenProps> {
       <View>
         <Text>Bienvenido a la aplicación&hellip;</Text>
         <TouchableOpacity
-          onPress={() => this.props.navigation.navigate('ActivityScreen')}>
+          onPress={() => this.props.navigation.navigate('ActivityListScreen')}>
           <Text>Ir a listado de actividades</Text>
         </TouchableOpacity>
       </View>

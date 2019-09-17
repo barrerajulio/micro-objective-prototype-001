@@ -1,6 +1,6 @@
 import {createStackNavigator} from 'react-navigation-stack';
 
-import {ActivityScreen} from '../screens/private/ActivityScreens/ActivityScreen/Activity.screen';
+import {ActivityScreen} from '../screens/private/ActivityScreens/Activity/Activity.screen';
 import {HomeScreen} from '../screens/public/Home/Home.screen';
 
 export const MainNavigator = createStackNavigator(
@@ -13,6 +13,9 @@ export const MainNavigator = createStackNavigator(
     },
     ActivityScreen: {
       screen: ActivityScreen,
+      navigationOptions: {
+        header: null,
+      },
     },
   },
   {
