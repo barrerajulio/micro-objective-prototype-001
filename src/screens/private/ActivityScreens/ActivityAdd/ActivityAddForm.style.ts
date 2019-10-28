@@ -16,4 +16,7 @@ export const styles = StyleSheet.create({
   labelEnable: {
     color: '#fff',
   },
+  text: {
+    color: '#fff',
+  },
 });

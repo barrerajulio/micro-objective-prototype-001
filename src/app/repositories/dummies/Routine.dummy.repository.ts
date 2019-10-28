@@ -5,7 +5,6 @@ import {
   IActivityRepository,
   IActivityResponse,
 } from '../../interfaces/repositories/Activity.repository';
-import {injectProperty} from './../../../ioc';
 import {
   IRoutineRepository,
   IRoutineResponse,

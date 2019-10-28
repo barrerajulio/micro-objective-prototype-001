@@ -7,9 +7,9 @@ interface IBabelPropertyDescriptor extends PropertyDescriptor {
   initializer(): any;
 }
 
-export const inject = function(
-  serviceIdentifier: interfaces.ServiceIdentifier<any>,
-) {
+export const inject = function<T>(
+  serviceIdentifier: interfaces.ServiceIdentifier<T>,
+): any {
   const decorators = getDecorators(getContainer());
   const originalService = decorators.lazyInject(serviceIdentifier);
   // the 'descriptor' parameter is actually always defined for class fields for Babel, but is considered undefined for TSC
