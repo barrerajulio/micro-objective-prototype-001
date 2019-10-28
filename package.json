@@ -8,6 +8,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "formik": "^1.5.8",
     "inversify": "^5.0.1",
     "inversify-inject-decorators": "^3.1.0",
     "react": "16.8.6",
@@ -17,7 +18,8 @@
     "react-navigation": "^4.0.5",
     "react-navigation-drawer": "^2.2.1",
     "react-navigation-stack": "^1.8.0",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -30,6 +32,7 @@
     "@types/react-native": "^0.60.11",
     "@types/react-test-renderer": "^16.9.0",
     "@types/sinon": "^7.0.13",
+    "@types/yup": "^0.26.24",
     "babel-jest": "^24.9.0",
     "eslint": "^6.3.0",
     "faker": "^4.1.0",
